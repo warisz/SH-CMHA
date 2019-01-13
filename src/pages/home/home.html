@@ -5,37 +5,48 @@
 </ion-header>
 <ion-content padding>
   <img src="http://www.cmhaoxford.on.ca/wp-content/themes/wotch/images/cmha_oxford@2x.png" height="100" />
+ 
   <h4>This apps is a collboration between the Canadian Mental Health Association</h4>
+  <br>
+  <br>
+  <br>
+  <br>
   <p>Survey is marked 1 to 5, 1 being lowest, 5 being the highest</p>
   <p>Generally, how pleased with life have you been feeling today?</p>
-  <ion-list radio-group [(ngModel)]="relationship">
+  <ion-list radio-group [(ngModel)]="relationship" type="q1">
     <ion-item>
       <ion-label>1 - Not Pleased At All</ion-label>
-      <ion-radio value=1></ion-radio>
+      <ion-radio value=1 (ionSelect)="answer(1)"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>2 - A Little Pleased</ion-label>
-      <ion-radio value=2></ion-radio>
+      <ion-radio value=2 (ionSelect)="answer(2)"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>3 - Somewhat Pleased</ion-label>
-      <ion-radio value=3></ion-radio>
+      <ion-radio value=3 (ionSelect)="answer(3)"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>4 - Pleased</ion-label>
-      <ion-radio value=4></ion-radio>
+      <ion-radio value=4 (ionSelect)="answer(4)"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>5 - Really Pleased at Life</ion-label>
-      <ion-radio value=5></ion-radio>
+      <ion-radio value=5 (ionSelect)="answer(5)"></ion-radio>
     </ion-item>
   </ion-list>
 
+  <button block ion-button>Submit</button>
+
+  <br>
+  <br>
+  <br>
+  <br>
   <p>
     The purpose of this app is to provide a statical view of your mood, specifically for that posses a mental illness
   </p>
   <p>
-    Please fill out the survey on a daily basis, there you can view your results in the <a href="src/pages/about/about.html">Results Tab</a>
+    Please fill out the survey on a daily basis, there you can view your results in the <button (click)="send()">Results Tab</button>
   </p>
 
 </ion-content>

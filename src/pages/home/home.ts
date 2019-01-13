@@ -15,4 +15,16 @@ export class HomePage {
     this.navCtrl.parent.select(1);
   }
 
+  answer(num){
+    if (num==1){
+      console.log("1");
+    }
+    if (num==2){
+      console.log("2");
+    }
+  }
+
+
 }
+
+
