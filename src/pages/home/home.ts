@@ -8,7 +8,11 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
+    
+  }
 
+  send(){
+    this.navCtrl.parent.select(1);
   }
 
 }

@@ -1,17 +1,35 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Resources
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+    <p>Need someone? We're here to help, anytime.</p>
+    <button ion-item (click)="callCMHA()">
+      <ion-icon name="call" item-start></ion-icon>
+      CMHA Hotline
+    </button>
+
+    <button ion-item (click)="callCSP()">
+      <ion-icon name="call" item-start></ion-icon>
+      Centre for Suicide Prevention
+    </button>
+
+    <button ion-item (click)="callKHP()"> 
+      <ion-icon name="call" item-start></ion-icon>
+      Kids Help Phone
+    </button>
+
+
+    <button ion-item (click)="callEmail()">
+      <ion-icon name="mail" item-start></ion-icon>
+      CMHA Email
+    </button>
+
+    
   </ion-list>
 </ion-content>
